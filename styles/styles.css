@@ -63,6 +63,10 @@ img {
     box-shadow: rgb(255 255 255 / 5%) -200px 200px 50px;
 }
 
+#lens-container.hidden {
+    display: none;
+}
+
 #lens {
     position: absolute;
     overflow: hidden;
@@ -188,6 +192,10 @@ img {
     width: 1vw;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
+}
+
+#cross-air-container.hidden {
+    display: none;
 }
 
 #cross-air {

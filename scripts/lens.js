@@ -3,13 +3,15 @@ function initializeLens() {
 }
 
 function updateLens(e) {
-    window.nodes.lensContainer.style.display = 'block';
+    window.nodes.lensContainer.classList.remove('hidden');
+    window.nodes.crossAirContainer.classList.remove('hidden');
 
     const mouseXinImg = e.pageX - window.data.imgXonPage,
         mouseYinImg = e.pageY - window.data.imgYonPage;
 
     if (mouseXinImg < 0 || mouseXinImg > window.data.backgroundImgWidth || mouseYinImg < 0 || mouseYinImg > window.data.backgroundImgHeight) {
-        window.nodes.lensContainer.style.display = 'none';
+        window.nodes.lensContainer.classList.add('hidden');
+        window.nodes.crossAirContainer.classList.add('hidden');
         return
     }
 
@@ -17,8 +19,6 @@ function updateLens(e) {
         lensYinImg = (mouseYinImg - (window.nodes.lensNode.getBoundingClientRect().height / 2));
 
     updateLensPos(lensXinImg, lensYinImg);
-
-    window.nodes.lensContainer.style.display = 'block';
 }
 
 function updateLensPos(lensXinImg, lensYinImg) {

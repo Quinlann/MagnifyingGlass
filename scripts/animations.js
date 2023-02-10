@@ -19,7 +19,6 @@ function initializeAnimations() {
         duration: .5,
         ease: "circ.out",
         onComplete: () => {
-            console.log('complete');
             window.nodes.scoreHud.style.boxShadow = 'rgb(0 0 0 / 0%) 0vw 0vw 1.5vw 0vw';
         }
     }, 'start')

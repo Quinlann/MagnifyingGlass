@@ -61,7 +61,7 @@ const pickups = [{
     },
     {
         id: 7,
-        name: 'Start',
+        name: 'Start 1',
         posX: 37.44,
         posY: 49.35,
         img: "./assets/encounter-token.png"
@@ -92,6 +92,13 @@ const pickups = [{
         name: 'Farm at top',
         posX: 74.42,
         posY: 62.42,
+        img: "./assets/encounter-token.png"
+    },
+    {
+        id: 12,
+        name: 'Start 0',
+        posX: 48.44,
+        posY: 19.35,
         img: "./assets/encounter-token.png"
     }
 ]

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/fog-styles.css">
+    <link rel="stylesheet" href="./styles/mise-en-scene.css">
     <script src="./scripts/gsap.min.js"></script>
 
     <script src="./scripts/nodes.js"></script>
@@ -56,11 +57,25 @@
         <div id="play-area">
             <img class="background-image noselect"
                 src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
-            <div id="lens-container" style="display:none;">
+            <div class="mise-en-scene">
+                <img src="./assets/man_w_cow.png" class="man-w-cow">
+                <img src="./assets/man_sitting_at_campfire.png" class="man-sitting-campfire">
+                <img src="./assets/man_standing_at_campfire.png" class="man-sitting-campfire">
+                <img src="./assets/magnifyingglass.png" class="magnifying-glass-pickup">
+                <img src="./assets/man_triumph_w_magglass.png" class="man-with-magnifying">
+            </div>
+            <div id="lens-container" class="hidden">
                 <div id="lens">
                     <div id="lens-obj-container">
                         <img id="background-map" class="noselect"
                             src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
+                        <div class="mise-en-scene">
+                            <img src="./assets/man_w_cow.png" class="man-w-cow">
+                            <img src="./assets/man_sitting_at_campfire.png" class="man-sitting-campfire">
+                            <img src="./assets/man_standing_at_campfire.png" class="man-sitting-campfire">
+                            <img src="./assets/magnifyingglass.png" class="magnifying-glass-pickup">
+                            <img src="./assets/man_triumph_w_magglass.png" class="man-with-magnifying">
+                        </div>
                         <div id="pickup-puff" style="display: none;"></div>
                     </div>
                     <div id="lens-flares"></div>
@@ -93,7 +108,7 @@
                     <div class="fog"></div>
                 </div>
             </div>
-            <div id="cross-air-container">
+            <div id="cross-air-container" class="hidden">
                 <div id="cross-air"></div>
             </div>
         </div>
