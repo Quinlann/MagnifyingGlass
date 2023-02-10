@@ -1,0 +1,103 @@
+#fog-container {
+    opacity: 0.99;
+}
+
+.fog {
+    position: absolute;
+    background-color: black;
+    box-shadow: black 0vw 0vw 2vw 3vw;
+}
+
+#fog-start-container {
+    opacity: 0;
+}
+
+#fog-start-container .fog:nth-child(1) {
+    left: 27%;
+    top: 50%;
+    width: 22%;
+    height: 8%;
+    transform: rotate(17deg);
+}
+
+#fog-start-container .fog:nth-child(2) {
+    left: 45%;
+    top: 42%;
+    width: 30%;
+    height: 8%;
+    transform: rotate(336deg);
+}
+
+#fog-start-container .fog:nth-child(3) {
+    left: 32%;
+    top: 10%;
+    width: 34%;
+    height: 35%;
+}
+
+#fog-village-container .fog:nth-child(1) {
+    right: 0%;
+    bottom: 0%;
+    width: 64%;
+    height: 40%;
+}
+
+#fog-village-container .fog:nth-child(2) {
+    right: -5%;
+    bottom: 25%;
+    width: 51%;
+    height: 36%;
+    transform: rotate(330deg);
+}
+
+#fog-mine-container .fog:nth-child(1) {
+    left: 0%;
+    bottom: 0%;
+    width: 24%;
+    height: 43%;
+}
+
+#fog-mine-container .fog:nth-child(2) {
+    left: 24%;
+    bottom: 0%;
+    width: 24%;
+    height: 25%;
+}
+
+#fog-mine-container .fog:nth-child(3) {
+    left: 23%;
+    bottom: 22%;
+    width: 24%;
+    height: 18%;
+    transform: rotate(21deg);
+}
+
+#fog-oilrig-container .fog:nth-child(1) {
+    right: 16%;
+    top: 0%;
+    width: 40%;
+    height: 19%;
+    transform: rotate(36deg);
+}
+
+#fog-oilrig-container .fog:nth-child(2) {
+    right: 0%;
+    top: 0%;
+    width: 30%;
+    height: 23%;
+}
+
+#fog-mechshop-container .fog:nth-child(1) {
+    left: 0%;
+    top: 0%;
+    width: 24%;
+    height: 52%;
+}
+
+#fog-mechshop-container .fog:nth-child(2) {
+    left: 10%;
+    height: 40%;
+    width: 40%;
+    top: -14%;
+    transform: rotate(-45deg);
+}

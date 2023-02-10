@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scripts/styles.css">
+    <link rel="stylesheet" href="./scripts/fog-styles.css">
+    <script src="./scripts/gsap.min.js"></script>
+
+    <script src="./scripts/nodes.js"></script>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/tools.js"></script>
+    <script src="./scripts/animations.js"></script>
+    <script src="./scripts/lensObj.js"></script>
+    <script src="./scripts/lens.js"></script>
+    <script src="./scripts/positionLocator.js"></script>
+
+    <script>
+        window.onload = () => {
+            (function () {
+                initializeNodes();
+                initializeData();
+                initializeTools();
+                initializeAnimations();
+                initializeLensObj();
+                initializeLens();
+                if (false) initializePositionLocator();
+            })();
+
+            document.addEventListener('mousemove', function (e) {
+                updateLens(e);
+            });
+
+            window.addEventListener('resize', function (e) {
+                window.data.imgXonPage = window.scrollX + window.nodes.backgroundImg.getBoundingClientRect()
+                    .x;
+                window.data.imgYonPage = window.scrollY + window.nodes.backgroundImg.getBoundingClientRect()
+                    .y;
+                setLensSize();
+
+                window.nodes.lensContainer.style.display = 'none';
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="play-area-container">
+        <div id="play-area">
+            <img class="background-image noselect"
+                src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
+            <div id="lens-container" style="display:none;">
+                <div id="lens">
+                    <div id="lens-obj-container">
+                        <img id="background-map" class="noselect"
+                            src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
+                        <div id="pickup-puff" style="display: none;"></div>
+                    </div>
+                    <div id="lens-flares"></div>
+                </div>
+                <div id="lens-rimshadow"></div>
+                <img id="magnifying-glass-img" src="./assets/magnifyingglass.png" />
+                <div id="lens-highlight"></div>
+            </div>
+            <div id="cross-air-container">
+                <div id="cross-air"></div>
+            </div>
+            <div id="fog-container">
+                <div id="fog-mechshop-container">
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                </div>
+                <div id="fog-oilrig-container">
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                </div>
+                <div id="fog-mine-container">
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                </div>
+                <div id="fog-start-container">
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                </div>
+                <div id="fog-village-container">
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                </div>
+            </div>
+        </div>
+        <div id="score-stars" style="display: none;"></div>
+    </div>
+    <div id="score-container">
+        <div id="score-hud" class="noselect">
+            <img id="score-encounter" src="./assets/encounter-token.png">
+            <div id="score-counter">0 / 0</div>
+        </div>
+    </div>
+    <div id="version-control">0.12</div>
+
+</body>
+
+</html>
