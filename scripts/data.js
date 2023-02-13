@@ -94,6 +94,10 @@ const miseEnScene = [
     }
 ]
 
+miseEnScene.map((item, index) => {
+    item.id = index;
+});
+
 let data = {
     backgroundImgWidth: nodes.backgroundImg.getBoundingClientRect().width,
     backgroundImgHeight: nodes.backgroundImg.getBoundingClientRect().height,
