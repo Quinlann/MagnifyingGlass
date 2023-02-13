@@ -14,44 +14,15 @@
     <link rel="stylesheet" href="./styles/mise-en-scene.css">
     <script src="./scripts/gsap.min.js"></script>
 
-    <script src="./scripts/nodes.js"></script>
-    <script src="./scripts/data.js"></script>
-    <script src="./scripts/tools.js"></script>
-    <script src="./scripts/animations.js"></script>
-    <script src="./scripts/lensObj.js"></script>
-    <script src="./scripts/lens.js"></script>
-    <script src="./scripts/positionLocator.js"></script>
+    <script type="module" src="./app.js"></script>
 
-    <script>
-        window.onload = () => {
-            (function () {
-                initializeNodes();
-                initializeData();
-                initializeTools();
-                initializeAnimations();
-                initializeLensObj();
-                initializeLens();
-                if (false) initializePositionLocator();
-            })();
-
-            document.addEventListener('mousemove', function (e) {
-                updateLens(e);
-            });
-
-            window.addEventListener('resize', function (e) {
-                window.data.imgXonPage = window.scrollX + window.nodes.backgroundImg.getBoundingClientRect()
-                    .x;
-                window.data.imgYonPage = window.scrollY + window.nodes.backgroundImg.getBoundingClientRect()
-                    .y;
-                setLensSize();
-
-                window.nodes.lensContainer.style.display = 'none';
-            });
-
-            // disable rightclick
-            // window.addEventListener('contextmenu', event => event.preventDefault());
-        }
-    </script>
+    <script type="module" src="./scripts/nodes.js"></script>
+    <script type="module" src="./scripts/data.js"></script>
+    <script type="module" src="./scripts/tools.js"></script>
+    <script type="module" src="./scripts/animations.js"></script>
+    <script type="module" src="./scripts/lensObj.js"></script>
+    <script type="module" src="./scripts/lens.js"></script>
+    <script type="module" src="./scripts/positionLocator.js"></script>
 </head>
 
 <body>

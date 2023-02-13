@@ -1,14 +1,4 @@
-function initializeData() {
-    window.data = {};
-    
-    window.data.backgroundImgWidth = window.nodes.backgroundImg.getBoundingClientRect().width;
-    window.data.backgroundImgHeight = window.nodes.backgroundImg.getBoundingClientRect().height;
-    window.data.imgXonPage = window.scrollX + window.nodes.backgroundImg.getBoundingClientRect().x;
-    window.data.imgYonPage = window.scrollY + window.nodes.backgroundImg.getBoundingClientRect().y;
-    window.data.pickups = pickups;
-    window.data.starSpeed = 5;
-    window.data.fog = fog;
-}
+import nodes from './nodes.js'
 
 const pickups = [{
         id: 0,
@@ -103,8 +93,13 @@ const pickups = [{
     }
 ]
 
-const fog = [{
-        id: 0,
-        
-    }
-]
+let data = {
+    backgroundImgWidth: nodes.backgroundImg.getBoundingClientRect().width,
+    backgroundImgHeight: nodes.backgroundImg.getBoundingClientRect().height,
+    imgXonPage: window.scrollX + nodes.backgroundImg.getBoundingClientRect().x,
+    imgYonPage: window.scrollY + nodes.backgroundImg.getBoundingClientRect().y,
+    pickups: pickups,
+    starSpeed: 5
+};
+
+export default data;
