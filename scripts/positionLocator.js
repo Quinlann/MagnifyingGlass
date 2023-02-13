@@ -18,8 +18,8 @@ function initializePositionLocator() {
         }
 
         if (leftPosPrc && topPosPrc) {
-            window.data.pickups.push({
-                id: window.data.pickups.length,
+            window.data.miseEnScene.push({
+                id: window.data.miseEnScene.length,
                 posX: leftPosPrc,
                 posY: topPosPrc,
                 img: './assets/encounter-token.png'
@@ -27,6 +27,6 @@ function initializePositionLocator() {
             window.tools.addAllPickups();
         }
 
-        console.log(window.data.pickups);
+        console.log(window.data.miseEnScene);
     });
 }

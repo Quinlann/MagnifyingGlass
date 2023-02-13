@@ -1,10 +1,10 @@
 import data from './scripts/data.js';
-import initializeLensObj from './scripts/lensObj.js';
-import lens from './scripts/lens.js'
+import tools from './scripts/tools.js';
+import lens from './scripts/lens.js';
 
 window.onload = () => {
     (function () {
-        initializeLensObj();
+        tools.addMiseEnScene();
         lens.initializeLens();
         if (false) initializePositionLocator();
     })();
