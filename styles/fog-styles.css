@@ -13,6 +13,16 @@
     opacity: 0;
 }
 
+#fog-start-circle {
+    left: 49%;
+    top: 39%;
+    width: 30%;
+    aspect-ratio: 1;
+    background-color: transparent;
+    box-shadow: inset black 0vw 0vw 2vw 3vw, black 0vw 0vw 2vw 13vw;
+    transform: translate(-50%, -50%);
+}
+
 #fog-start-container .fog:nth-child(1) {
     left: 27%;
     top: 50%;

@@ -47,6 +47,9 @@
 
                 window.nodes.lensContainer.style.display = 'none';
             });
+
+            // disable rightclick
+            // window.addEventListener('contextmenu', event => event.preventDefault());
         }
     </script>
 </head>
@@ -55,7 +58,7 @@
 
     <div id="play-area-container">
         <div id="play-area">
-            <img class="background-image noselect"
+            <img class="background-image"
                 src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
             <div class="mise-en-scene">
                 <img src="./assets/man_w_cow.png" class="man-w-cow">
@@ -67,8 +70,7 @@
             <div id="lens-container" class="hidden">
                 <div id="lens">
                     <div id="lens-obj-container">
-                        <img id="background-map" class="noselect"
-                            src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
+                        <img id="background-map" src="./assets/Resource_scythe_inspired_gamemat_magnified_no-encounters.png">
                         <div class="mise-en-scene">
                             <img src="./assets/man_w_cow.png" class="man-w-cow">
                             <img src="./assets/man_sitting_at_campfire.png" class="man-sitting-campfire">
@@ -98,15 +100,16 @@
                     <div class="fog"></div>
                     <div class="fog"></div>
                 </div>
+                <div id="fog-village-container">
+                    <div class="fog"></div>
+                    <div class="fog"></div>
+                </div>
                 <div id="fog-start-container">
                     <div class="fog"></div>
                     <div class="fog"></div>
                     <div class="fog"></div>
                 </div>
-                <div id="fog-village-container">
-                    <div class="fog"></div>
-                    <div class="fog"></div>
-                </div>
+                <div class="fog" id="fog-start-circle"></div>
             </div>
             <div id="cross-air-container" class="hidden">
                 <div id="cross-air"></div>
@@ -115,7 +118,7 @@
         <div id="score-stars" style="display: none;"></div>
     </div>
     <div id="score-container">
-        <div id="score-hud" class="noselect">
+        <div id="score-hud">
             <img id="score-encounter" src="./assets/encounter-token.png">
             <div id="score-counter">0 / 0</div>
         </div>
