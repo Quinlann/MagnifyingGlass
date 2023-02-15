@@ -23,8 +23,10 @@ let tools = {
     addMiseEnScene: () => {
         tools.removeAllPickups();
 
-        data.miseEnScene.map((item) => {
-            tools.addMiseEnSceneItem(item);
+        data.miseEnScene.map((scene) => {
+            scene.items.map((item) => {
+                tools.addMiseEnSceneItem(item);
+            });
         });
 
         tools.updateScore();

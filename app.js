@@ -1,4 +1,5 @@
 import data from './scripts/data.js';
+import nodes from './scripts/nodes.js';
 import tools from './scripts/tools.js';
 import lens from './scripts/lens.js';
 

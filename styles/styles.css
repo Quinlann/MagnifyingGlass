@@ -24,6 +24,12 @@ img {
                                     supported by Chrome, Edge, Opera and Firefox */
 }
 
+.disabled {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+}
+
 #version-control {
     color: white;
     position: fixed;
@@ -191,10 +197,6 @@ img {
     width: 1vw;
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
-}
-
-#cross-air-container.hidden {
-    display: none;
 }
 
 #cross-air {
